@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cape May Villas Buy Boxes</title>
+<meta name="robots" content="noindex" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <div class="site-header__brand">
+      <div class="site-header__mark">STR</div>
+      <div class="site-header__title" id="site-title"></div>
+    </div>
+    <nav class="site-nav">
+      <a href="#declaration">Buy Boxes</a>
+      <a href="#market">Market</a>
+      <a href="#map">Location</a>
+      <a href="#demographics">Demographics</a>
+      <a href="#property-size">Property Size</a>
+      <a href="#justification">Why These Boxes</a>
+      <a href="#deep-dive">Deep Dive</a>
+      <a href="#underwriting">Underwriting</a>
+    </nav>
+    <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">Theme</button>
+  </div>
+</header>
+
+<main>
+  <section id="declaration" class="section section--hero">
+    <div class="container">
+      <p class="section-kicker">Recommendation</p>
+      <h1 id="hero-h1"></h1>
+      <p class="lede" id="hero-lede"></p>
+      <div id="hero-kpis" class="kpi-grid"></div>
+      <div id="buybox-declarations" class="declarations-grid"></div>
+    </div>
+  </section>
+
+  <section id="market" class="section">
+    <div class="container">
+      <p class="section-kicker">Section 2</p>
+      <h2>The Market</h2>
+      <div id="market-body"></div>
+    </div>
+  </section>
+
+  <section id="regulations" class="section section--note">
+    <div class="container"><div id="regulation-note" class="regulation"></div></div>
+  </section>
+
+  <section id="map" class="section">
+    <div class="container">
+      <p class="section-kicker">Section 3</p>
+      <h2>Location Analysis</h2>
+      <p class="muted small" id="map-sub"></p>
+      <div class="map-layout">
+        <div id="leaflet-map" class="map-canvas" role="img" aria-label="Map of Airbnb listings by revenue tier"></div>
+        <aside class="map-sidebar">
+          <div id="map-legend" class="panel"></div>
+          <div id="map-filters" class="panel"></div>
+        </aside>
+      </div>
+      <div id="map-interpretation" class="prose" style="margin-top:18px"></div>
+    </div>
+  </section>
+
+  <section id="demographics" class="section">
+    <div class="container">
+      <p class="section-kicker">Section 4</p>
+      <h2>Traveler Demographics</h2>
+      <div class="chart-row" id="demo-charts"></div>
+      <div id="demographics-interpretation" class="prose"></div>
+    </div>
+  </section>
+
+  <section id="property-size" class="section">
+    <div class="container">
+      <p class="section-kicker">Section 5</p>
+      <h2>Property-Size Analysis</h2>
+      <div class="chart-row" id="size-charts"></div>
+      <div id="size-interpretation" class="prose"></div>
+    </div>
+  </section>
+
+  <section id="justification" class="section">
+    <div class="container">
+      <p class="section-kicker">Section 6</p>
+      <h2 id="justification-h2">Why These Buy Boxes</h2>
+      <div id="justification-body"></div>
+    </div>
+  </section>
+
+  <section id="deep-dive" class="section">
+    <div class="container">
+      <p class="section-kicker">Section 7</p>
+      <h2>Buy-Box Deep Dive</h2>
+      <div id="deep-dive-tabs" class="tabs" role="tablist"></div>
+      <div id="deep-dive-content"></div>
+    </div>
+  </section>
+
+  <section id="underwriting" class="section">
+    <div class="container">
+      <p class="section-kicker">Section 8</p>
+      <h2>Underwriting Assumptions &amp; Method</h2>
+      <div id="underwriting-body"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container" id="footer-body"></div>
+</footer>
+
+<div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Expanded image">
+  <button type="button" class="lightbox__close" aria-label="Close image">&times;</button>
+  <figure><img id="lightbox-image" alt="" /><figcaption id="lightbox-caption"></figcaption></figure>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/render.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/map.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
